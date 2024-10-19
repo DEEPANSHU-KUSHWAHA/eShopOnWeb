@@ -54,8 +54,8 @@ jobs:
         run: |
           mkdir -p .net-app/.github/pages
           mv .net-app/app.zip .net-app/.github/pages/
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .net-app/.github/pages
+    - name: Deploy to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+    publish_dir: .net-app/.github/pages
